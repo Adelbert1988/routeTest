@@ -31,7 +31,7 @@
             }
         });
 ```
-* 动态跳转  
+* 动态拦截跳转  
 ```
      /**
       * 注册动态拦截跳转
@@ -51,6 +51,8 @@
 ```
 ***
 * module之间调用  
+在library工程中定义各个Module的接口，对外提供的服务，和link一样通过注解自动汇总所有module的provider  
+
 ```
      /** module之间通信，调用**/
      Router.openProvider(TestProvider.class).doTest();
