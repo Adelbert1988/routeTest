@@ -10,14 +10,14 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/common-business-lib" />
-            <option value="$PROJECT_DIR$/gnh-router-lib" />
-            <option value="$PROJECT_DIR$/gnh-router-lib/router-annotation" />
-            <option value="$PROJECT_DIR$/gnh-router-lib/router-api" />
-            <option value="$PROJECT_DIR$/gnh-router-lib/router-compiler" />
             <option value="$PROJECT_DIR$/moduledemo1" />
             <option value="$PROJECT_DIR$/moduledemo2" />
             <option value="$PROJECT_DIR$/moduledemo3" />
             <option value="$PROJECT_DIR$/moduledemo4" />
+            <option value="$PROJECT_DIR$/router-lib" />
+            <option value="$PROJECT_DIR$/router-lib/router-annotation" />
+            <option value="$PROJECT_DIR$/router-lib/router-api" />
+            <option value="$PROJECT_DIR$/router-lib/router-compiler" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

@@ -23,5 +23,5 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile project(':gnh-router-lib:router-api')
+    compile project(':router-lib:router-api')
 }
