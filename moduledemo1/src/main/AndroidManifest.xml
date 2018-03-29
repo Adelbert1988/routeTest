@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="demo.router.com.moduledemo1" >
+
+
+    <application>
+
+        <activity android:name="com.example.routertest1.TestRouterActivity3"/>
+        <activity android:name="com.example.routertest1.TestRouterActivity4"/>
+    </application>
+
+
+</manifest>

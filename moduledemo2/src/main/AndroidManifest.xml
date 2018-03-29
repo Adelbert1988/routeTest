@@ -1,0 +1,9 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.routertest2" >
+
+    <application>
+
+        <activity android:name=".TestRouterActivity1"/>
+        <activity android:name=".TestRouterActivity2"/>
+    </application>
+</manifest>

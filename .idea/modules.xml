@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/common-business-lib/common-business-lib.iml" filepath="$PROJECT_DIR$/common-business-lib/common-business-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gnh-router-lib/gnh-router-lib.iml" filepath="$PROJECT_DIR$/gnh-router-lib/gnh-router-lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduledemo2/moduledemo.iml" filepath="$PROJECT_DIR$/moduledemo2/moduledemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduledemo1/moduledemo1.iml" filepath="$PROJECT_DIR$/moduledemo1/moduledemo1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduledemo2/moduledemo2.iml" filepath="$PROJECT_DIR$/moduledemo2/moduledemo2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduledemo3/moduledemo3.iml" filepath="$PROJECT_DIR$/moduledemo3/moduledemo3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/moduledemo4/moduledemo4.iml" filepath="$PROJECT_DIR$/moduledemo4/moduledemo4.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gnh-router-lib/router-annotation/router-annotation.iml" filepath="$PROJECT_DIR$/gnh-router-lib/router-annotation/router-annotation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gnh-router-lib/router-api/router-api.iml" filepath="$PROJECT_DIR$/gnh-router-lib/router-api/router-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gnh-router-lib/router-compiler/router-compiler.iml" filepath="$PROJECT_DIR$/gnh-router-lib/router-compiler/router-compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/routerTest.iml" filepath="$PROJECT_DIR$/routerTest.iml" />
+    </modules>
+  </component>
+</project>
