@@ -13,29 +13,46 @@
     }
   }  
   ```
-***
-* 动态跳转  
+***  
+* 路由link跳转  
 ```
-        /**
-         * 注册动态拦截跳转
-         */
-        Router.registerLinkRedirect(new ILinkRedirectProvider() {
-
+  //没有回调   
+  Router.openLink("/module2/routeractivity2").execute(); 
+  //带跳转回调          
+  Router.openLink("/module2/routeractivity2").execute(this, new GNHRouteCallBack() {
             @Override
-            public String redirectPath(String originalPath) {
-                return super.redirectPath(originalPath);
+            public void onSuccess(RouteReq routeReq) {
+
             }
 
             @Override
-            public Uri redirectUri(Uri originalUri) {
-                return super.redirectUri(originalUri);
+            public void onFail(RouteReq routeReq) {
+
             }
         });
+```
+* 动态跳转  
+```
+     /**
+      * 注册动态拦截跳转
+      */
+     Router.registerLinkRedirect(new ILinkRedirectProvider() {
+
+         @Override
+         public String redirectPath(String originalPath) {
+             return super.redirectPath(originalPath);
+         }
+
+         @Override
+         public Uri redirectUri(Uri originalUri) {
+             return super.redirectUri(originalUri);
+         }
+     });
 ```
 ***
 * module之间调用  
 ```
-        /** module之间通信，调用**/
-        Router.openProvider(TestProvider.class).doTest();
+     /** module之间通信，调用**/
+     Router.openProvider(TestProvider.class).doTest();
 ```
 ***
