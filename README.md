@@ -55,4 +55,8 @@
      /** module之间通信，调用**/
      Router.openProvider(TestProvider.class).doTest();
 ```
-***
+***  
+  
+    
+      
+      
