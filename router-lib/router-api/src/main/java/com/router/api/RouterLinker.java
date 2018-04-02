@@ -11,7 +11,7 @@ import com.router.api.router.RouteReq;
  * Date: 2018/2/7
  */
 
-public class Router {
+public class RouterLinker {
 
     /**
      * 初始化路由

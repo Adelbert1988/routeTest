@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.business.providers.TestProvider;
 import com.router.annotation.RouteLink;
-import com.router.api.Router;
+import com.router.api.RouterLinker;
 
 import demo.router.com.moduledemo1.R;
 
@@ -21,11 +21,11 @@ public class TestRouterActivity3 extends Activity{
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.layout_test_3);
-        Router.openProvider(TestProvider.class).doTest();
+        RouterLinker.openProvider(TestProvider.class).doTest();
     }
 
 
     private void initTest() {
-        Router.openLink("adsf").execute();
+        RouterLinker.openLink("adsf").execute();
     }
 }

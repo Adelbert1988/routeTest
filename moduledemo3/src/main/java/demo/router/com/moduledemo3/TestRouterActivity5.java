@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.business.providers.Module1Provider;
 import com.router.annotation.RouteLink;
-import com.router.api.Router;
+import com.router.api.RouterLinker;
 
 /**
  * User: chw
@@ -19,7 +19,7 @@ public class TestRouterActivity5 extends Activity{
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.layout_test_7);
-        Router.openProvider(Module1Provider.class).doModule1Action();
+        RouterLinker.openProvider(Module1Provider.class).doModule1Action();
     }
 
 

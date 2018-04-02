@@ -1,14 +1,11 @@
 package com.example.routertest2;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
 import com.router.annotation.RouteLink;
-import com.router.api.RouteMappingManager;
-import com.router.api.Router;
-import com.router.api.model.RouteInfo;
+import com.router.api.RouterLinker;
 
 /**
  * User: chw
@@ -25,6 +22,6 @@ public class TestRouterActivity2 extends Activity{
 
 
     public void goModuleAct6(View view) {
-        Router.openLink("/module3/routeractivity6").execute();
+        RouterLinker.openLink("/module3/routeractivity6").execute();
     }
 }
