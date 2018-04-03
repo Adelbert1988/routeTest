@@ -4,9 +4,12 @@ package com.router.api;
 import com.router.api.provider.IProvider;
 import com.router.api.model.RouteInfo;
 import com.router.api.provider.ILinkRedirectProvider;
+import com.router.api.provider.InterceptProvider;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 
 /**
  * User: chw
@@ -21,6 +24,8 @@ public class RouteMappingManager {
     private HashMap<String, IProvider> mProviderInstanceMap;
     private HashMap<String, Class<? extends IProvider>> mProviderClassMap;
 
+    private List<InterceptProvider> mInterceptors;
+
     private static class Holder {
         static RouteMappingManager INSTANCE = new RouteMappingManager();
     }
@@ -33,6 +38,7 @@ public class RouteMappingManager {
         mRouteLinkMap = new HashMap<>();
         mProviderClassMap = new HashMap<>();
         mProviderInstanceMap = new HashMap<>();
+        mInterceptors = new ArrayList<>();
     }
 
     /**
@@ -82,9 +88,9 @@ public class RouteMappingManager {
         mProviderClassMap.put(path, providerCls);
     }
 
-/**
- * 编译的时候aspectj会使用的方法 =======================================================================
- */
+    /**
+     * 编译的时候aspectj会使用的方法 =======================================================================
+     */
 
 
     public RouteInfo getRouteInfo(String path) {
@@ -125,6 +131,14 @@ public class RouteMappingManager {
      */
     public ILinkRedirectProvider getLinkRedirectProvider() {
         return mRouteLinkProvider;
+    }
+
+    /**
+     * 获得拦截器
+     * @return
+     */
+    public List<InterceptProvider> getInterceptors() {
+        return mInterceptors;
     }
 }
 

@@ -13,6 +13,10 @@ import com.router.api.model.RouteInfo;
  */
 
 public class RouteReq {
+    //没有找到对应路由
+    public static final int ERROR_NOT_FOUND = 10001;
+    //被拦截
+    public static final int ERROR_INTERCEPT = 10003;
 
     public Uri uri;
     public String linkPath;
@@ -23,6 +27,8 @@ public class RouteReq {
     public Bundle bundle;
 
     public RouteInfo routeInfo;
+
+    public int statusCode;
 
     public RouteReq(String linkPath) {
         this.linkPath = linkPath;
