@@ -1,7 +1,6 @@
 # 路由方案
 1. 通过自定义注解标记页面路由地址和模块provider服务  
 
-  
  注解页面路由
  
  ```java  
@@ -21,22 +20,23 @@
 	    }
 	}  
 ```
-  注解模块provider
-    
-	```java
-	@RouteProvider("/module4/")
-	public class Module4ProviderImpl implements Module4Provider {
+ 注解模块provider
+ 
+ ```java  
+	@RouteProvider("/module1/test")
+	public class Module1ProviderImpl implements Module1Provider {
+
 	    @Override
 	    public void init(Context context) {
-	
+
 	    }
-	
+
 	    @Override
-	    public void doModule4Action() {
-	
+	    public void doModule1Action() {
+
 	    }
 	}
-	```
+ ```
 2. 自动注册  
   * 编译时Apt扫描出被注解的activity和provider, 使用Javapoet生成映射类文件  
   ```
