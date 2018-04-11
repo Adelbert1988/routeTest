@@ -57,6 +57,14 @@ public class RouteMappingManager {
         mRouteLinkProvider = iRouteLinkProvider;
     }
 
+    /**
+     * 增加拦截器
+     * @param interceptProvider
+     */
+    public void addInterceptor(InterceptProvider interceptProvider) {
+        mInterceptors.add(interceptProvider);
+    }
+
 /**
  * 编译的时候aspectj使用代码的方法 ======================================================================
  */

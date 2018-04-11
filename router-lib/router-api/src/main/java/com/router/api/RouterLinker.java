@@ -4,6 +4,7 @@ import android.content.Context;
 import android.net.Uri;
 
 import com.router.api.provider.ILinkRedirectProvider;
+import com.router.api.provider.InterceptProvider;
 import com.router.api.router.RouteReq;
 
 /**
@@ -57,5 +58,8 @@ public class RouterLinker {
         RouteMappingManager.getInstance().registerLinkRedirectProvider(iRouteLinkProvider);
     }
 
+    public static void addInterceptor(InterceptProvider interceptProvider) {
+        RouteMappingManager.getInstance().addInterceptor(interceptProvider);
+    }
 
 }
