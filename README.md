@@ -59,8 +59,7 @@
 		  }
 		}
 	  ```  
-        
-  * Aspectj 在编译class过程中织入所有module的路由映射类的初始化到 RouteMappingManager 的init方法，实现自动注册
+  * Aspectj 在编译class过程中织入所有module的路由映射类的初始化到 RouteMappingManager 的init方法，实现自动注册
 
 	  织入provider注册代码到路由地址管理中心  
 	  ```
