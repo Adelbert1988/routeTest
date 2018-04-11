@@ -1,64 +1,64 @@
 # 路由方案
 1. 通过自定义注解标记页面路由地址和模块provider服务  
 
- 注解页面路由
- 
- ```java  
-	@RouteLink("/module4/routeractivity5")
-	public class TestRouterActivity7 extends Activity{
-		
-	    @Override
-	    protected void onCreate(Bundle savedInstanceState) {
-	        super.onCreate(savedInstanceState);
-		
-	        setContentView(R.layout.layout_test_1);
-	    }
-		
-		
-	    private void initTest() {
-		
-	    }
-	}  
-```
- 注解模块provider
- 
- ```java  
-	@RouteProvider("/module1/test")
-	public class Module1ProviderImpl implements Module1Provider {
+	注解页面路由
 
-	    @Override
-	    public void init(Context context) {
+	 ```java  
+		@RouteLink("/module4/routeractivity5")
+		public class TestRouterActivity7 extends Activity{
 
-	    }
+		    @Override
+		    protected void onCreate(Bundle savedInstanceState) {
+			super.onCreate(savedInstanceState);
 
-	    @Override
-	    public void doModule1Action() {
+			setContentView(R.layout.layout_test_1);
+		    }
 
-	    }
-	}
- ```
+
+		    private void initTest() {
+
+		    }
+		}  
+	```
+	注解模块provider
+
+	 ```java  
+		@RouteProvider("/module1/test")
+		public class Module1ProviderImpl implements Module1Provider {
+
+		    @Override
+		    public void init(Context context) {
+
+		    }
+
+		    @Override
+		    public void doModule1Action() {
+
+		    }
+		}
+	 ```
 2. 自动注册  
   * 编译时Apt扫描出被注解的activity和provider, 使用Javapoet生成映射类文件  
   ```java  
-@Aspect
-public final class Router$$moduledemo4$$ActivityMapping {
-    @After("execution(* com.router.api.RouteMappingManager.initLinkMapping())")
-    public void addRouterLink() {
-	RouteMappingManager.getInstance().addLinkMapping("/module4/routeractivity5", RouteInfo.build("/module4/routeractivity5", TestRouterActivity7.class, "", false, -2147483648));
-	RouteMappingManager.getInstance().addLinkMapping("/module4/routeractivity6", RouteInfo.build("/module4/routeractivity6", TestRouterActivity8.class, "", false, -2147483648));
-    }
-}
+	@Aspect
+	public final class Router$$moduledemo4$$ActivityMapping {
+	    @After("execution(* com.router.api.RouteMappingManager.initLinkMapping())")
+	    public void addRouterLink() {
+		RouteMappingManager.getInstance().addLinkMapping("/module4/routeractivity5", RouteInfo.build("/module4/routeractivity5", TestRouterActivity7.class, "", false, -2147483648));
+		RouteMappingManager.getInstance().addLinkMapping("/module4/routeractivity6", RouteInfo.build("/module4/routeractivity6", TestRouterActivity8.class, "", false, -2147483648));
+	    }
+	}
   ```  
     
     
   ```java  
-@Aspect
-public final class Router$$moduledemo4$$ProviderMapping {
-  @After("execution(* com.router.api.RouteMappingManager.initProviderMapping())")
-  public void addRouterProvider() {
-    RouteMappingManager.getInstance().addProviderMapping("com.business.providers.Module4Provider", Module4ProviderImpl.class);
-  }
-}
+	@Aspect
+	public final class Router$$moduledemo4$$ProviderMapping {
+	  @After("execution(* com.router.api.RouteMappingManager.initProviderMapping())")
+	  public void addRouterProvider() {
+	    RouteMappingManager.getInstance().addProviderMapping("com.business.providers.Module4Provider", Module4ProviderImpl.class);
+	  }
+	}
   ```  
         
   * Aspectj 在编译class过程中织入所有module的路由映射类的初始化到 RouteMappingManager 的init方法，实现自动注册
