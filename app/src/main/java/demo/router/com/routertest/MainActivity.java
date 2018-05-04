@@ -16,9 +16,6 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Uri uri = Uri.parse("geinihua://geinihua.app/test/main/activity?appid=12&type=123");
-        Log.d("myuri path: ", ""+ uri.getPath() + "   " + uri.getQuery());
-
         RouterLinker.init(this);
 
         /** module之间通信，调用**/
